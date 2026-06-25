@@ -1,7 +1,7 @@
-import { MODAL_STATE } from "../shared/types";
 import { ModalOptions } from "./ModalOptions";
 import { ModalForm } from "./ModalForm";
 import { ModalTemplates } from "./ModalTemplates";
+import { MODAL_STATE } from "../shared/constants";
 import type { useModal } from "../hooks/useModal";
 
 type Props = {

@@ -1,5 +1,6 @@
 import type { Dispatch, SetStateAction } from "react";
-import { PRIORITY, type Priority } from "../shared/types";
+import { PRIORITY } from "../shared/constants";
+import { type Priority } from "../shared/types";
 import { btn } from "../shared/styles";
 
 type Props = {

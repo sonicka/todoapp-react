@@ -1,11 +1,6 @@
 import { useState } from "react";
-import {
-  MODAL_STATE,
-  PRIORITY,
-  type ModalState,
-  type Priority,
-  type Template,
-} from "../shared/types";
+import { type ModalState, type Priority, type Template } from "../shared/types";
+import { MODAL_STATE, PRIORITY } from "../shared/constants";
 
 const INITIAL_TITLE = "";
 const INITIAL_PRIORITY: Priority = PRIORITY.normal;
@@ -49,7 +44,7 @@ export function useModal(addTodo: (title: string, priority: Priority) => void) {
     close();
   };
 
-  const modalTitle: Record<ModalState, string> = {
+  const ModalLabel: Record<ModalState, string> = {
     startingOptions: "Vytvořit nový úkol",
     form: "Podrobnosti úkolu",
     templates: "Vyberte šablonu",
@@ -62,7 +57,7 @@ export function useModal(addTodo: (title: string, priority: Priority) => void) {
     priority,
     setTitle,
     setPriority,
-    modalTitle: modalTitle[modalState],
+    modalLabel: ModalLabel[modalState],
     open,
     close,
     goToForm,

@@ -1,11 +1,11 @@
 import { Card } from "./Card";
-import { getTotalPlural, getFinishedPlural } from "../utils";
+import { getTotalPlural, getFinishedPlural } from "../shared/utils";
 import { btn } from "../shared/styles";
 
 type Props = {
   totalTodosNumber: number;
   finishedTodosNumber: number;
-  createNewTodo: () => void;
+  addNewTodo: () => void;
   unfinishedShownOnly: boolean;
   showUnfinishedOnly: () => void;
 };
@@ -13,7 +13,7 @@ type Props = {
 export function Header({
   totalTodosNumber,
   finishedTodosNumber,
-  createNewTodo,
+  addNewTodo,
   unfinishedShownOnly,
   showUnfinishedOnly,
 }: Props) {
@@ -26,7 +26,7 @@ export function Header({
       <div className="flex w-full gap-3 items-center justify-between">
         <button
           className={`${btn} bg-blue-600 text-white hover:bg-gray-800`}
-          onClick={createNewTodo}
+          onClick={addNewTodo}
         >
           + Nový úkol
         </button>
@@ -37,7 +37,7 @@ export function Header({
             onChange={showUnfinishedOnly}
             className="cursor-pointer"
           />
-          <span> Zobrazit pouze nedokončené</span>
+          <span>Zobrazit pouze nedokončené</span>
         </label>
       </div>
     </section>

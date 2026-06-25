@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { STATUS, type Priority, type Todo } from "../shared/types";
 import { TodosData } from "../data/todos";
-import { sortTodos } from "../utils";
+import { sortTodos } from "../shared/utils";
+import { STATUS } from "../shared/constants";
+import { type Priority, type Todo } from "../shared/types";
 
 export const useTodos = () => {
   const [allTodos, setAllTodos] = useState<Todo[]>(TodosData);

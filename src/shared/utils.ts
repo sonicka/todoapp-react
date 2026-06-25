@@ -1,4 +1,5 @@
-import { PRIORITY, STATUS, type Todo } from "./shared/types";
+import { PRIORITY, STATUS } from "./constants";
+import { type Todo } from "./types";
 
 export function sortTodos(a: Todo, b: Todo) {
   const aRank = a.status === STATUS.finished ? 1 : 0;

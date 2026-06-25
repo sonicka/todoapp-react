@@ -1,15 +1,6 @@
-export const STATUS = {
-  planned: "planned",
-  finished: "finished",
-} as const;
+import type { STATUS, PRIORITY, MODAL_STATE } from "./constants";
 
 export type Status = (typeof STATUS)[keyof typeof STATUS];
-
-export const PRIORITY = {
-  low: "low",
-  normal: "normal",
-  high: "high",
-} as const;
 
 export type Priority = (typeof PRIORITY)[keyof typeof PRIORITY];
 
@@ -28,11 +19,5 @@ export type Template = {
     priority: Priority;
   };
 };
-
-export const MODAL_STATE = {
-  startingOptions: "startingOptions",
-  form: "form",
-  templates: "templates",
-} as const;
 
 export type ModalState = (typeof MODAL_STATE)[keyof typeof MODAL_STATE];

@@ -20,11 +20,11 @@ function App() {
   const modal = useModal(createNewTodo);
 
   return (
-    <section className="flex justify-center flex-col gap-8 py-4">
+    <div className="flex justify-center flex-col gap-8 py-4">
       <Header
         totalTodosNumber={totalTodosNumber}
         finishedTodosNumber={finishedTodosNumber}
-        createNewTodo={modal.open}
+        addNewTodo={modal.open}
         unfinishedShownOnly={unfinishedShownOnly}
         showUnfinishedOnly={showUnfinishedOnly}
       />
@@ -33,10 +33,10 @@ function App() {
         finishTodo={finishTodo}
         deleteTodo={deleteTodo}
       />
-      <Modal title={modal.modalTitle} open={modal.isOpen} onClose={modal.close}>
+      <Modal title={modal.modalLabel} open={modal.isOpen} onClose={modal.close}>
         <ModalContent modal={modal} />
       </Modal>
-    </section>
+    </div>
   );
 }
 

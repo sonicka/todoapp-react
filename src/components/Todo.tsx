@@ -1,6 +1,6 @@
 import { Card } from "./Card";
-import { STATUS, type Todo } from "../shared/types";
-import { PriorityLabel } from "../shared/constants";
+import { type Todo } from "../shared/types";
+import { PriorityLabel, STATUS } from "../shared/constants";
 import { btn, colorMap } from "../shared/styles";
 
 type Props = {
