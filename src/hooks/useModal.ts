@@ -6,6 +6,12 @@ const INITIAL_TITLE = "";
 const INITIAL_PRIORITY: Priority = PRIORITY.normal;
 const INITIAL_MODAL_STATE: ModalState = MODAL_STATE.startingOptions;
 
+const ModalLabel: Record<ModalState, string> = {
+  startingOptions: "Vytvořit nový úkol",
+  form: "Podrobnosti úkolu",
+  templates: "Vyberte šablonu",
+};
+
 export function useModal(addTodo: (title: string, priority: Priority) => void) {
   const [isOpen, setIsOpen] = useState(false);
   const [modalState, setModalState] = useState<ModalState>(INITIAL_MODAL_STATE);
@@ -23,12 +29,6 @@ export function useModal(addTodo: (title: string, priority: Priority) => void) {
     setIsOpen(true);
   };
 
-  const close = () => {
-    resetForm();
-    setModalState(INITIAL_MODAL_STATE);
-    setIsOpen(false);
-  };
-
   const goToForm = () => setModalState(MODAL_STATE.form);
   const goToTemplates = () => setModalState(MODAL_STATE.templates);
   const goBack = () => setModalState(INITIAL_MODAL_STATE);
@@ -44,26 +44,26 @@ export function useModal(addTodo: (title: string, priority: Priority) => void) {
     close();
   };
 
-  const ModalLabel: Record<ModalState, string> = {
-    startingOptions: "Vytvořit nový úkol",
-    form: "Podrobnosti úkolu",
-    templates: "Vyberte šablonu",
+  const close = () => {
+    resetForm();
+    setModalState(INITIAL_MODAL_STATE);
+    setIsOpen(false);
   };
 
   return {
-    isOpen,
-    modalState,
     title,
     priority,
     setTitle,
     setPriority,
     modalLabel: ModalLabel[modalState],
+    modalState,
+    isOpen,
     open,
-    close,
     goToForm,
     goToTemplates,
-    goBack,
     applyTemplate,
     save,
+    goBack,
+    close,
   };
 }

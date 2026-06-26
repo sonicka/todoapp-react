@@ -10,7 +10,7 @@ type Props = {
   showUnfinishedOnly: () => void;
 };
 
-export function Header({
+export function TodosHeader({
   totalTodosNumber,
   finishedTodosNumber,
   addNewTodo,

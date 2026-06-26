@@ -2,10 +2,10 @@ type Props = {
   title?: string;
   open: boolean;
   onClose: () => void;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 };
 
-export function Modal({ title, open, onClose, children }: Props) {
+export function Modal({ title = "", open, onClose, children }: Props) {
   if (!open) {
     return null;
   }
@@ -17,9 +17,7 @@ export function Modal({ title, open, onClose, children }: Props) {
       />
 
       <div className="p-5 relative w-full max-w-md rounded-2xl bg-white shadow-2xl">
-        <h4 className="text-lg font-semibold text-gray-800">
-          {title || "Modal"}
-        </h4>
+        <h4 className="text-lg font-semibold text-gray-800">{title}</h4>
         <div>{children}</div>
       </div>
     </div>

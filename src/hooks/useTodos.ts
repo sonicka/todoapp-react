@@ -4,7 +4,7 @@ import { sortTodos } from "../shared/utils";
 import { STATUS } from "../shared/constants";
 import { type Priority, type Todo } from "../shared/types";
 
-export const useTodos = () => {
+export function useTodos() {
   const [allTodos, setAllTodos] = useState<Todo[]>(TodosData);
   const [unfinishedShownOnly, setUnfinishedShownOnly] = useState(false);
 
@@ -47,14 +47,13 @@ export const useTodos = () => {
   };
 
   return {
-    allTodos,
     shownTodos,
     totalTodosNumber,
     finishedTodosNumber,
     unfinishedShownOnly,
+    showUnfinishedOnly,
     createNewTodo,
     finishTodo,
     deleteTodo,
-    showUnfinishedOnly,
   };
-};
+}

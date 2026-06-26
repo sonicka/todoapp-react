@@ -11,22 +11,26 @@ type Props = {
 export function ModalContent({ modal }: Props) {
   const {
     title,
-    setTitle,
     priority,
+    setTitle,
     setPriority,
     modalState,
     goToForm,
     goToTemplates,
-    save,
-    close,
-    goBack,
     applyTemplate,
+    save,
+    goBack,
+    close,
   } = modal;
 
   return (
     <div>
       {modalState === MODAL_STATE.startingOptions && (
-        <ModalOptions onGoToForm={goToForm} onGoToTemplates={goToTemplates} />
+        <ModalOptions
+          onGoToForm={goToForm}
+          onGoToTemplates={goToTemplates}
+          onCancel={close}
+        />
       )}
       {modalState === MODAL_STATE.form && (
         <ModalForm

@@ -1,18 +1,18 @@
 import "./index.css";
-import { Header } from "./components/Header";
-import { Modal } from "./components/Modal";
-import { useTodos } from "./hooks/useTodos";
+import { TodosHeader } from "./components/TodosHeader";
 import { TodosList } from "./components/TodosList";
 import { ModalContent } from "./components/ModalContent";
+import { Modal } from "./components/Modal";
+import { useTodos } from "./hooks/useTodos";
 import { useModal } from "./hooks/useModal";
 
 function App() {
   const {
     shownTodos,
-    unfinishedShownOnly,
-    showUnfinishedOnly,
     totalTodosNumber,
     finishedTodosNumber,
+    unfinishedShownOnly,
+    showUnfinishedOnly,
     createNewTodo,
     finishTodo,
     deleteTodo,
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="flex justify-center flex-col gap-8 py-4">
-      <Header
+      <TodosHeader
         totalTodosNumber={totalTodosNumber}
         finishedTodosNumber={finishedTodosNumber}
         addNewTodo={modal.open}

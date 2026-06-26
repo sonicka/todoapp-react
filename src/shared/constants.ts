@@ -1,4 +1,4 @@
-import type { Priority, Status } from "./types";
+import type { Priority } from "./types";
 
 export const STATUS = {
   planned: "planned",
@@ -17,13 +17,8 @@ export const MODAL_STATE = {
   templates: "templates",
 } as const;
 
-export const PriorityLabel: Record<Priority, string> = {
+export const PRIORITY_LABEL: Record<Priority, string> = {
   low: "Nízká",
   normal: "Normální",
   high: "Vysoká",
-};
-
-export const StatusLabel: Record<Status, string> = {
-  planned: "Plánováno",
-  finished: "Dokončeno",
 };

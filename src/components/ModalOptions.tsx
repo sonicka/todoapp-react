@@ -3,9 +3,10 @@ import { btn } from "../shared/styles";
 type Props = {
   onGoToForm: () => void;
   onGoToTemplates: () => void;
+  onCancel: () => void;
 };
 
-export function ModalOptions({ onGoToForm, onGoToTemplates }: Props) {
+export function ModalOptions({ onGoToForm, onGoToTemplates, onCancel }: Props) {
   return (
     <div className="flex flex-col gap-2 pt-10">
       <button
@@ -19,6 +20,12 @@ export function ModalOptions({ onGoToForm, onGoToTemplates }: Props) {
         onClick={onGoToTemplates}
       >
         Vytvořit ze šablony
+      </button>
+      <button
+        className={`${btn} mt-5 border border-gray-300 text-gray-700 hover:bg-gray-100`}
+        onClick={onCancel}
+      >
+        Zrušit
       </button>
     </div>
   );

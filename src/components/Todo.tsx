@@ -1,7 +1,13 @@
 import { Card } from "./Card";
-import { type Todo } from "../shared/types";
-import { PriorityLabel, STATUS } from "../shared/constants";
-import { btn, colorMap } from "../shared/styles";
+import { type Priority, type Todo } from "../shared/types";
+import { PRIORITY_LABEL, STATUS } from "../shared/constants";
+import { btn } from "../shared/styles";
+
+const PRIORITY_COLOR: Record<Priority, string> = {
+  high: "border-l-red-500",
+  normal: "border-l-yellow-500",
+  low: "border-l-green-500",
+};
 
 type Props = {
   todo: Todo;
@@ -14,7 +20,7 @@ export function Todo({ todo, finishTodo, deleteTodo }: Props) {
     <div>
       <Card
         title={todo.title}
-        body={`Priorita: ${PriorityLabel[todo.priority]}`}
+        body={`Priorita: ${PRIORITY_LABEL[todo.priority]}`}
         actions={
           <div className="mt-6 flex gap-2">
             {todo.status === STATUS.planned && (
@@ -34,7 +40,7 @@ export function Todo({ todo, finishTodo, deleteTodo }: Props) {
             </button>
           </div>
         }
-        className={`${colorMap[todo.priority]} ${
+        className={`${PRIORITY_COLOR[todo.priority]} ${
           todo.status === STATUS.finished ? "opacity-50" : "opacity-100"
         }`}
       ></Card>

@@ -20,7 +20,7 @@ export function ModalForm({
   onSave,
   onCancel,
 }: Props) {
-  const isEmpty = title.trim() === "";
+  const isSaveDisabled = title.trim() === "";
   return (
     <div className="flex w-full max-w-md flex-col gap-5 pt-5 text-left rounded-xl bg-white">
       <div className="flex flex-col gap-1">
@@ -88,7 +88,7 @@ export function ModalForm({
         <button
           onClick={onSave}
           className={`${btn} flex-1 bg-blue-600 text-white enabled:hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed`}
-          disabled={isEmpty}
+          disabled={isSaveDisabled}
         >
           Přidat úkol
         </button>
