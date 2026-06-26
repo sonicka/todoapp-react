@@ -20,7 +20,7 @@ function App() {
   const modal = useModal(createNewTodo);
 
   return (
-    <div className="flex justify-center flex-col gap-8 py-4">
+    <div className="flex flex-col items-center gap-8 py-4 px-4 sm:px-6 lg:px-0">
       <TodosHeader
         totalTodosNumber={totalTodosNumber}
         finishedTodosNumber={finishedTodosNumber}
