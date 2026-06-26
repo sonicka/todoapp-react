@@ -1,4 +1,4 @@
-# TODO App (React)
+# TODO App / React
 
 A simple TODO application built with React/TypeScript and Tailwind CSS.
 
