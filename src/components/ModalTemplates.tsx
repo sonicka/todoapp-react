@@ -19,7 +19,9 @@ export function ModalTemplates({ onApply, onBack, onClose }: Props) {
             key={template.id}
             onClick={() => onApply(template)}
           >
-            <h5 className="pb-1">{template.title}</h5>
+            <p className="text-xl font-semibold pb-1 leading-tight">
+              {template.title}
+            </p>
             <span>{`Priorita: ${PRIORITY_LABEL[template.defaults.priority]}`}</span>
           </div>
         ))}
