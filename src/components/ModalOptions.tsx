@@ -8,7 +8,7 @@ type Props = {
 
 export function ModalOptions({ onGoToForm, onGoToTemplates, onCancel }: Props) {
   return (
-    <div className="flex flex-col gap-2 pt-10">
+    <div className="flex flex-col gap-2 pt-8">
       <button
         className={`${btn} w-full bg-blue-600 text-white hover:bg-gray-800`}
         onClick={onGoToForm}
