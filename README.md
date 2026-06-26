@@ -1,4 +1,4 @@
-# TODO App
+# TODO App (React)
 
 A simple TODO application built with React/TypeScript and Tailwind CSS.
 
@@ -10,9 +10,9 @@ Frontend-only application with no backend or data persistence.
 
 ---
 
-## Deployed preview available [here](https://todoapp-react-ashy-chi.vercel.app/)
+### Deployed preview available [here](https://todoapp-react-ashy-chi.vercel.app/).
 
-## Same app built in Vue available [here](https://github.com/sonicka/todoapp-vue/)
+### Same app built in Vue available [here](https://github.com/sonicka/todoapp-vue/).
 
 ---
 
@@ -26,6 +26,11 @@ Frontend-only application with no backend or data persistence.
 
 ## Features
 
+### Overview
+
+- Shows total number of tasks and number of unfinished tasks.
+- Display button for creating a new task and option to filter out only unfinished tasks.
+
 ### Task List
 
 - Displays all tasks, each shows title, priority and status
@@ -35,8 +40,6 @@ Frontend-only application with no backend or data persistence.
 - Filter option:
   - “Show only unfinished tasks”
 - Tasks can be set as finished or deleted
-
----
 
 ### Create New Task
 
