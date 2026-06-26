@@ -28,8 +28,8 @@ Frontend-only application with no backend or data persistence.
 
 ### Overview
 
-- Shows total number of tasks and number of unfinished tasks.
-- Display button for creating a new task and option to filter out only unfinished tasks.
+- Shows total number of tasks and number of unfinished tasks
+- Displays button for creating a new task and option to filter out only unfinished tasks
 
 ### Task List
 
