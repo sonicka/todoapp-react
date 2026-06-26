@@ -26,7 +26,7 @@ export function Todo({ todo, finishTodo, deleteTodo }: Props) {
             {todo.status === STATUS.planned && (
               <button
                 onClick={() => finishTodo(todo.id)}
-                className={`${btn} bg-gray-600 text-white hover:bg-gray-800`}
+                className={`${btn} bg-gray-600 text-white hover:bg-gray-700`}
               >
                 Dokončit
               </button>

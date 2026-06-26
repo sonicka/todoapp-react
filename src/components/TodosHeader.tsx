@@ -25,7 +25,7 @@ export function TodosHeader({
       />
       <div className="flex flex-col-reverse sm:flex-row w-full gap-3 items-start sm:items-center justify-between">
         <button
-          className={`${btn} bg-blue-600 text-white hover:bg-gray-800 whitespace-nowrap shrink-0`}
+          className={`${btn} bg-blue-600 text-white hover:bg-blue-700 whitespace-nowrap shrink-0`}
           onClick={addNewTodo}
         >
           + Nový úkol

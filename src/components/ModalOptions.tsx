@@ -10,13 +10,13 @@ export function ModalOptions({ onGoToForm, onGoToTemplates, onCancel }: Props) {
   return (
     <div className="flex flex-col gap-2 pt-8">
       <button
-        className={`${btn} w-full bg-blue-600 text-white hover:bg-gray-800`}
+        className={`${btn} w-full bg-blue-600 text-white hover:bg-blue-700`}
         onClick={onGoToForm}
       >
         Vytvořit od začátku
       </button>
       <button
-        className={`${btn} w-full bg-gray-600 text-white hover:bg-gray-800`}
+        className={`${btn} w-full bg-gray-600 text-white hover:bg-gray-700`}
         onClick={onGoToTemplates}
       >
         Vytvořit ze šablony

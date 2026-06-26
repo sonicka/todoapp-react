@@ -9,12 +9,6 @@
   --mono: ui-monospace, Consolas, monospace;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
 body {
   font-family: var(--sans);
   font-size: 18px;
