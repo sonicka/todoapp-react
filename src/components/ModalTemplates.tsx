@@ -1,4 +1,5 @@
 import { TodosTemplates } from "../data/todos";
+import { PRIORITY_LABEL } from "../shared/constants";
 import { btn } from "../shared/styles";
 import type { Template } from "../shared/types";
 
@@ -18,8 +19,8 @@ export function ModalTemplates({ onApply, onBack, onClose }: Props) {
             key={template.id}
             onClick={() => onApply(template)}
           >
-            <h5>{template.title}</h5>
-            <span>{template.defaults.title}</span>
+            <h5 className="pb-1">{template.title}</h5>
+            <span>{`Priorita: ${PRIORITY_LABEL[template.defaults.priority]}`}</span>
           </div>
         ))}
       </div>
